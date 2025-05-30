@@ -106,9 +106,9 @@ CORS_ALLOWED_ORIGINS = [
     "https://admin.cimoschool.online",
 ]
 
-# CORS_ALLOW_HEADERS = list(default_headers) + [
-#     'authorization',
-# ]
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    'authorization',
+]
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
