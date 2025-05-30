@@ -1,0 +1,52 @@
+[2025-05-24 00:32:26] [INFO] Gọi hàm get_users | user_id: unknown | path: /Users/so-users/ | method: GET | data: {}
+[2025-05-24 00:34:19] [INFO] Gọi hàm get_users | user_id: 392fa92f-3361-47c8-9fda-a1de384a6e33 | path: /Users/so-users/ | method: GET | data: {}
+[2025-05-24 00:36:24] [log] Gọi hàm create_blog | user_id: unknown | path: /Blogs/so-blogs | method: POST | data: {'name': 'string', 'sumary': 'string', 'imgs': 'string', 'description': 'string', 'category': 'string', 'relateIds': 'string', 'soClassId': ['string'], 'isDeleted': True, 'createdBy': 'string', 'updatedBy': 'string'}
+[2025-05-24 00:38:56] [log] Gọi hàm create_blog | user_id: 392fa92f-3361-47c8-9fda-a1de384a6e33 | path: /Blogs/so-blogs | method: POST | data: {'name': 'string', 'sumary': 'string', 'imgs': 'string', 'description': 'string', 'category': 'string', 'relateIds': 'string', 'soClassId': ['string'], 'isDeleted': True, 'createdBy': 'string', 'updatedBy': 'string'}
+[2025-05-24 00:39:50] [log] Gọi hàm create_blog | user_id: 392fa92f-3361-47c8-9fda-a1de384a6e33 | path: /Blogs/so-blogs | method: POST | data: {'name': 'string', 'sumary': 'string', 'imgs': 'string', 'description': 'string', 'category': 'string', 'relateIds': 'string', 'soClassId': ['string'], 'isDeleted': True, 'createdBy': 'string', 'updatedBy': 'string'}
+[2025-05-24 00:40:35] [log] Gọi hàm create_blog | user_id: 392fa92f-3361-47c8-9fda-a1de384a6e33 | path: /Blogs/so-blogs | method: POST | data: {'name': 'string', 'sumary': 'string', 'imgs': 'string', 'description': 'string', 'category': 'string', 'relateIds': 'string', 'soClassId': ['string'], 'isDeleted': True, 'createdBy': 'string', 'updatedBy': 'string'}
+[2025-05-24 00:42:51] [log] Gọi hàm create_blog | name_user: Teacher0 | path: /Blogs/so-blogs | method: POST | data: {'name': 'string', 'sumary': 'string', 'imgs': 'string', 'description': 'string', 'category': 'string', 'relateIds': 'string', 'soClassId': ['string'], 'isDeleted': True, 'createdBy': 'string', 'updatedBy': 'string'}
+[2025-05-24 00:51:26] [log] Gọi hàm delete_blog | name_user: Teacher0 | path: /Blogs/so-blogs | method: DELETE | data: {'name': 'hdfgd', 'sumary': 'string', 'imgs': 'string', 'description': 'string', 'category': 'string', 'relateIds': 'string', 'soClassId': ['string'], 'isDeleted': True, 'createdBy': 'string', 'updatedBy': 'string'}
+[2025-05-24 00:52:32] [log] Gọi hàm get_blogs | name_user: Teacher0 | path: /Blogs/so-blogs | method: GET | data: {}
+[2025-05-24 00:54:38] [log] Gọi hàm get_blogs | name_user: Teacher0 | path: /Blogs/so-blogs | method: GET | data: {}
+[2025-05-24 00:58:26] [log] Gọi hàm create_blog | name_user: Teacher0 | path: /Blogs/so-blogs | method: POST | data: {'name': 'hdfgd', 'sumary': 'string', 'imgs': 'string', 'description': 'string', 'category': 'string', 'relateIds': 'string', 'soClassId': ['string'], 'isDeleted': True, 'createdBy': 'string', 'updatedBy': 'string'}
+[2025-05-24 00:59:02] [log] Gọi hàm get_blogs | name_user: Teacher0 | path: /Blogs/so-blogs | method: GET | data: {}
+[2025-05-24 01:00:18] [log] Gọi hàm get_blogs | name_user: Teacher0 | path: /Blogs/so-blogs | method: GET | data: {}
+[2025-05-24 01:00:32] [log] Gọi hàm get_blogs | name_user: Teacher0 | path: /Blogs/so-blogs | method: GET | data: {}
+[2025-05-24 01:01:17] [log] Gọi hàm get_blogs | name_user: Teacher0 | path: /Blogs/so-blogs | method: GET | data: {}
+[2025-05-24 01:04:05] [log] Gọi hàm update_blog | name_user: Teacher0 | path: /Blogs/so-blogs | method: PATCH | data: {'id': '0d731977-7520-4aa2-bf9c-edcf9cfc246f', 'name': 'Báo'}
+[2025-05-24 01:04:43] [log] Gọi hàm delete_blog | name_user: Teacher0 | path: /Blogs/so-blogs | method: DELETE | data: {'id': '0d731977-7520-4aa2-bf9c-edcf9cfc246f'}
+[2025-05-24 01:10:37] [log] Gọi hàm delete_blog | name_user: Teacher0 | path: /Blogs/so-blogs | method: DELETE | data: {'id': '0d731977-7520-4aa2-bf9c-edcf9cfc246f'}
+[2025-05-24 01:10:45] [log] Gọi hàm get_blogs | name_user: Teacher0 | path: /Blogs/so-blogs | method: GET | data: {}
+[2025-05-24 01:21:20] [log] Gọi hàm get_users | name_user: Teacher0 | path: /Users/so-users/ | method: GET | data: {}
+[2025-05-24 01:22:55] [log] Gọi hàm delete_user | name_user: Teacher0 | path: /Users/so-users/ | method: DELETE | data: {'id': '1eb78427-a8ed-4be5-9ba2-042b89fad74b'}
+[2025-05-24 01:23:14] [log] Gọi hàm get_users | name_user: Teacher0 | path: /Users/so-users/ | method: GET | data: {}
+[2025-05-24 13:14:49] [log] Gọi hàm get_classes | name_user: Teacher0 | path: /Classes/so-classes/ | method: GET | data: {}
+[2025-05-24 13:16:20] [log] Gọi hàm create_class | name_user: Teacher0 | path: /Classes/so-classes/ | method: POST | data: {'name': 'Da bong'}
+[2025-05-24 13:16:28] [log] Gọi hàm get_classes | name_user: Teacher0 | path: /Classes/so-classes/ | method: GET | data: {}
+[2025-05-24 13:16:57] [log] Gọi hàm update_class | name_user: Teacher0 | path: /Classes/so-classes/ | method: PATCH | data: {'id': '4e2c8a1c-25fb-40af-9ee6-29f1cd26d785', 'name': 'Da banh'}
+[2025-05-24 13:17:01] [log] Gọi hàm get_classes | name_user: Teacher0 | path: /Classes/so-classes/ | method: GET | data: {}
+[2025-05-24 13:17:09] [log] Gọi hàm delete_class | name_user: Teacher0 | path: /Classes/so-classes/ | method: DELETE | data: {'id': '4e2c8a1c-25fb-40af-9ee6-29f1cd26d785'}
+[2025-05-24 13:17:13] [log] Gọi hàm get_classes | name_user: Teacher0 | path: /Classes/so-classes/ | method: GET | data: {}
+[2025-05-24 13:41:06] [log] Gọi hàm get_role | name_user: Teacher0 | path: /Roles/so-roles/ | method: GET | data: {}
+[2025-05-24 13:41:38] [log] Gọi hàm create_role | name_user: Teacher0 | path: /Roles/so-roles/ | method: POST | data: {'name': 'me'}
+[2025-05-24 13:44:05] [log] Gọi hàm create_role | name_user: Teacher0 | path: /Roles/so-roles/ | method: POST | data: {'isDeleted': False, 'createdBy': 'string', 'updatedBy': 'string', 'name': 'me'}
+[2025-05-24 13:51:55] [log] Gọi hàm get_students | name_user: Teacher0 | path: /Students/so-students/ | method: GET | data: {}
+[2025-05-24 13:55:15] [log] Gọi hàm get_classes | name_user: Teacher0 | path: /Classes/so-classes/ | method: GET | data: {}
+[2025-05-24 13:55:30] [log] Gọi hàm create_student | name_user: Teacher0 | path: /Students/so-students/ | method: POST | data: {'name': 'baotran', 'dob': '2025-05-24T06:52:32.977Z', 'gender': 'string', 'phone': 'string', 'email': 'user@example.com', 'address': 'string', 'nationalId': 'string', 'avt': 'string', 'soClassId': '408da29e-db49-41db-8b44-beec96203cad'}
+[2025-05-24 13:55:50] [log] Gọi hàm create_student | name_user: Teacher0 | path: /Students/so-students/ | method: POST | data: {'name': 'baotran', 'dob': '2000-01-01 00:00:00', 'gender': 'string', 'phone': 'string', 'email': 'user@example.com', 'address': 'string', 'nationalId': 'string', 'avt': 'string', 'soClassId': '408da29e-db49-41db-8b44-beec96203cad'}
+[2025-05-24 13:55:58] [log] Gọi hàm create_student | name_user: Teacher0 | path: /Students/so-students/ | method: POST | data: {'name': 'baotran', 'dob': '2000-01-01 00:00:00', 'gender': '1', 'phone': 'string', 'email': 'user@example.com', 'address': 'string', 'nationalId': 'string', 'avt': 'string', 'soClassId': '408da29e-db49-41db-8b44-beec96203cad'}
+[2025-05-24 13:56:05] [log] Gọi hàm get_students | name_user: Teacher0 | path: /Students/so-students/ | method: GET | data: {}
+[2025-05-24 13:56:55] [log] Gọi hàm update_student | name_user: Teacher0 | path: /Students/so-students/ | method: PATCH | data: {'name': 'baotran', 'dob': '2000-01-01 00:00:00', 'gender': '0', 'phone': 'string', 'email': 'user@example.com', 'address': 'string', 'nationalId': 'string', 'avt': 'string', 'soClassId': '408da29e-db49-41db-8b44-beec96203cad'}
+[2025-05-24 13:57:02] [log] Gọi hàm get_students | name_user: Teacher0 | path: /Students/so-students/ | method: GET | data: {}
+[2025-05-24 13:57:45] [log] Gọi hàm update_student | name_user: Teacher0 | path: /Students/so-students/ | method: PATCH | data: {'id': 'a9703abe-d369-4345-a7b9-133280481ae8', 'gender': '0'}
+[2025-05-24 13:58:01] [log] Gọi hàm delete_student | name_user: Teacher0 | path: /Students/so-students/ | method: DELETE | data: {'id': 'a9703abe-d369-4345-a7b9-133280481ae8'}
+[2025-05-24 14:04:01] [log] Gọi hàm get_students | name_user: Teacher0 | path: /Students/so-students/ | method: GET | data: {}
+[2025-05-24 14:08:11] [log] Gọi hàm get_parents | name_user: Teacher0 | path: /Parents/so-parents/ | method: GET | data: {}
+[2025-05-24 14:09:05] [log] Gọi hàm create_parent | name_user: Teacher0 | path: /Parents/so-parents/ | method: POST | data: {'name': 'dat', 'dob': '2000-01-01 00:00:00', 'gender': '1', 'phone': 'string', 'email': 'string', 'address': 'string', 'nationalId': 'string', 'relation': 'string', 'job': 'string', 'avt': 'string', 'studentIds': ['0316dccc-f4d7-11ef-bf88-0242ac150002', '0316d923-f4d7-11ef-bf88-0242ac150002']}
+[2025-05-25 02:22:38] [log] Gọi hàm get_parents | name_user: unknown | path: /Parents/so-parents/ | method: GET | data: {}
+[2025-05-25 02:24:14] [log] Gọi hàm get_users | name_user: unknown | path: /Users/so-users/ | method: GET | data: {}
+[2025-05-25 02:24:57] [log] Gọi hàm get_parents | name_user: unknown | path: /Parents/so-parents/ | method: GET | data: {}
+[2025-05-25 02:25:10] [log] Gọi hàm get_role | name_user: unknown | path: /Roles/so-roles/ | method: GET | data: {}
+[2025-05-30 10:06:42] [log] Gọi hàm get_role | name_user: unknown | path: /Roles/so-roles/ | method: GET | data: {}
+[2025-05-30 10:07:48] [log] Gọi hàm get_role | name_user: unknown | path: /Roles/so-roles/ | method: GET | data: {}
+[2025-05-30 10:14:06] [log] Gọi hàm get_role | name_user: Teacher0 | path: /Roles/so-roles/ | method: GET | data: {}

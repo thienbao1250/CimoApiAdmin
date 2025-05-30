@@ -1,0 +1,1 @@
+from .so_role_serializer import SoRoleSerializer

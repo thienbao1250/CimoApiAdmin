@@ -1,0 +1,38 @@
+version: '3.9'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: cimo-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: cimo-coppy
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  web:
+    build: .
+    container_name: cimo-django
+    # command: python manage.py runserver 0.0.0.0:8000
+    command: ["sh", "-c", "sleep 10 && python manage.py runserver 0.0.0.0:8000"]
+
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  rasa:
+    build:
+      context: ../Cimo_Rasa   # Đường dẫn tới thư mục Rasa
+    container_name: cimo-rasa
+    ports:
+      - "5009:5009"
+    depends_on:
+      - web
+
+volumes:
+  db_data:
