@@ -46,9 +46,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     'ChatBot',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -96,7 +98,17 @@ WSGI_APPLICATION = 'Cimo.wsgi.application'
 #         }
 #     }
 # }
+from corsheaders.defaults import default_headers
+ALLOWED_HOSTS = ['*']
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "https://admin.cimoschool.online",
+]
 
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    'authorization',
+]
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
