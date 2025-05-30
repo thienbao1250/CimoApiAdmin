@@ -85,19 +85,19 @@ WSGI_APPLICATION = 'Cimo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'cimo',  # Tên database MySQL
-#         'USER': 'tandat1812',  # Tên user MySQL (thay đổi nếu cần)
-#         'PASSWORD': 'tandat1812',  # Mật khẩu MySQL
-#         'HOST': 's103d190-u2.interdata.vn',  # Hoặc 'localhost' nếu chạy cục bộ
-#         'PORT': '3306',  # Cổng mặc định của MySQL
-#         'OPTIONS': {
-#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-#         }
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'cimo',  # Tên database MySQL
+        'USER': 'tandat1812',  # Tên user MySQL (thay đổi nếu cần)
+        'PASSWORD': 'tandat1812',  # Mật khẩu MySQL
+        'HOST': 's103d190-u2.interdata.vn',  # Hoặc 'localhost' nếu chạy cục bộ
+        'PORT': '3306',  # Cổng mặc định của MySQL
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        }
+    }
+}
 from corsheaders.defaults import default_headers
 ALLOWED_HOSTS = ['*']
 CORS_ALLOW_CREDENTIALS = True
@@ -106,22 +106,22 @@ CORS_ALLOWED_ORIGINS = [
     "https://admin.cimoschool.online",
 ]
 
-CORS_ALLOW_HEADERS = list(default_headers) + [
-    'authorization',
-]
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'cimo',  # Tên database MySQL
-        'USER': 'root',  # Tên user MySQL (thay đổi nếu cần)
-        'PASSWORD': '123456',  # Mật khẩu MySQL
-        'HOST': '127.0.0.1',  # Hoặc 'localhost' nếu chạy cục bộ
-        'PORT': '3306',  # Cổng mặc định của MySQL
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        }
-    }
-}
+# CORS_ALLOW_HEADERS = list(default_headers) + [
+#     'authorization',
+# ]
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'cimo',  # Tên database MySQL
+#         'USER': 'root',  # Tên user MySQL (thay đổi nếu cần)
+#         'PASSWORD': '123456',  # Mật khẩu MySQL
+#         'HOST': '127.0.0.1',  # Hoặc 'localhost' nếu chạy cục bộ
+#         'PORT': '3306',  # Cổng mặc định của MySQL
+#         'OPTIONS': {
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#         }
+#     }
+# }
 
 APPEND_SLASH = True
 
