@@ -73,7 +73,8 @@ class SoUserAPIView(APIView):
                 return Response({"error": "Thiếu ID người dùng"}, status=400)
             user = SoUser.objects.get(id=user_id)
 
-            for field in ['username', 'name', 'dob', 'phone', 'email', 'address', 'nationalId', 'avt', 'createdBy', 'updatedBy']:
+            for field in ['username', 'name', 'dob', 'phone', 
+                'email', 'address', 'nationalId', 'avt', 'createdBy', 'updatedBy']:
                 if field in data:
                     setattr(user, field, data[field])
             if 'password' in data:
