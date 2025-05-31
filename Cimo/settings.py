@@ -99,6 +99,11 @@ DATABASES = {
     }
 }
 from corsheaders.defaults import default_headers
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+    "https://admin.cimoschool.online",
+]
+
 ALLOWED_HOSTS = ['*']
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
@@ -125,7 +130,7 @@ CORS_ALLOW_HEADERS = list(default_headers) + [
 
 APPEND_SLASH = True
 
-ALLOWED_HOSTS = ['*']
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
