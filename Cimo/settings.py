@@ -25,7 +25,22 @@ SECRET_KEY = 'django-insecure-)#ncgwf6+v%pe%yp$pk%swxp&12g%7j&o-+!j1itwl4dhqr#xm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+from corsheaders.defaults import default_headers
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+    "https://admin.cimoschool.online",
+]
 
+ALLOWED_HOSTS = ['*']
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "https://admin.cimoschool.online",
+]
+
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    'authorization',
+]
 
 
 # Application definition
@@ -98,22 +113,7 @@ DATABASES = {
         }
     }
 }
-from corsheaders.defaults import default_headers
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:3000",
-    "https://admin.cimoschool.online",
-]
 
-ALLOWED_HOSTS = ['*']
-CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "https://admin.cimoschool.online",
-]
-
-CORS_ALLOW_HEADERS = list(default_headers) + [
-    'authorization',
-]
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
