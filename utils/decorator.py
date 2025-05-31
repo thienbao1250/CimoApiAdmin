@@ -14,6 +14,7 @@ def logger(level, name):
         def wrapper(*args, **kwargs):
             request = args[1] if len(args) > 1 else None
             user_id = "unknown"
+            # name_user = "unknown"
             payload = {}
             data = {}
 

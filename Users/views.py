@@ -64,7 +64,7 @@ class SoUserAPIView(APIView):
         request_body=SoUserSerializer,
         responses={200: SoUserSerializer}
     )
-    @logger(level="log", name="update_user")
+    # @logger(level="log", name="update_user")
     def patch(self, request, *args, **kwargs):
         try:
             data = request.data
