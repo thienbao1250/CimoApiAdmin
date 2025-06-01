@@ -19,7 +19,7 @@ class SoRoleAPI(APIView):
         ],
         responses={200: SoRoleSerializer(many=True)}
     )
-    @logger(level="log", name="get_role")
+    # @logger(level="log", name="get_role")
     def get(self, request, *args, **kwargs):
         where = request.query_params.get("where")
         queryset = SoRole.objects.all()
@@ -38,7 +38,7 @@ class SoRoleAPI(APIView):
         request_body=SoRoleSerializer,
         responses={201: SoRoleSerializer}
     )
-    @logger(level="log", name="create_role")
+    # @logger(level="log", name="create_role")
     def post(self, request, *args, **kwargs):
         try:
             data = request.data
@@ -61,7 +61,7 @@ class SoRoleAPI(APIView):
         request_body=SoRoleSerializer,
         responses={200: SoRoleSerializer}
     )
-    @logger(level="log", name="update_role")
+    # @logger(level="log", name="update_role")
     def patch(self, request, *args, **kwargs):
         try:
             data = request.data
@@ -95,7 +95,7 @@ class SoRoleAPI(APIView):
         ),
         responses={200: openapi.Response("Xoá role thành công")}
     )
-    @logger(level="log", name="delete_role")
+    # @logger(level="log", name="delete_role")
     def delete(self, request, *args, **kwargs):
         try:
             role_id = request.data.get("id")
@@ -123,7 +123,7 @@ class SoRoleCountAPI(APIView):
             }
         ))}
     )
-    @logger(level="log", name="count_role")
+    # @logger(level="log", name="count_role")
     def get(self, request, *args, **kwargs):
         queryset = SoRole.objects.all()
         where = request.query_params.get("where")

@@ -64,3 +64,12 @@
 [2025-05-31 00:40:12] [log] Gọi hàm create_user | name_user: Teacher0 | path: /Users/so-users/ | method: POST | data: {'sender': '0528f891-f4d7-11ef-bf88-0242ac150002', 'text': 'Nguyễn Tiến Chính nghỉ ngày 30/5 đến 31/5 vì bị bệnh sốt'}
 [2025-05-31 00:40:29] [log] Gọi hàm get_users | name_user: Teacher0 | path: /Users/so-users/ | method: GET | data: {}
 [2025-05-31 01:18:57] [log] Gọi hàm get_blogs | name_user: Teacher0 | path: /Blogs/so-blogs/ | method: GET | data: {}
+[2025-05-31 14:31:48] [log] Gọi hàm get_role | name_user: Nguyễn Tấn Đạt | path: /Roles/so-roles/ | method: GET | data: {}
+[2025-05-31 14:31:55] [log] Gọi hàm get_parents | name_user: unknown | path: /Parents/so-parents/ | method: GET | data: {}
+[2025-05-31 14:32:02] [log] Gọi hàm get_role | name_user: unknown | path: /Roles/so-roles/ | method: GET | data: {}
+[2025-05-31 14:32:10] [log] Gọi hàm get_role | name_user: unknown | path: /Roles/so-roles/ | method: GET | data: {}
+[2025-05-31 14:32:19] [log] Gọi hàm get_blogs | name_user: unknown | path: /Blogs/so-blogs/ | method: GET | data: {}
+[2025-05-31 14:32:22] [log] Gọi hàm get_role | name_user: unknown | path: /Roles/so-roles/ | method: GET | data: {}
+[2025-05-31 14:35:16] [log] Gọi hàm get_users | name_user: unknown | path: /Users/so-users/ | method: GET | data: {}
+[2025-05-31 14:36:26] [log] Gọi hàm get_users | name_user: unknown | path: /Users/so-users/ | method: GET | data: {}
+[2025-05-31 14:36:32] [log] Gọi hàm create_user | name_user: unknown | path: /Users/so-users/ | method: POST | data: {'isDeleted': False, 'createdBy': 'Admin', 'updatedBy': 'Admin', 'name': 'Admin'}

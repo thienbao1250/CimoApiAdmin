@@ -17,7 +17,7 @@ class SoBlogsAPI(APIView):
         ],
         responses={200: SoBlogsSerializer(many=True)}
     )
-    @logger(level="log", name="get_blogs")
+    # @logger(level="log", name="get_blogs")
     def get(self, request,*args, **kwargs):
         class_id = request.query_params.get("classId")
         blogs = SoBlogs.objects.filter(isDeleted=False)
@@ -30,7 +30,7 @@ class SoBlogsAPI(APIView):
         request_body=SoBlogsSerializer,
         responses={201: SoBlogsSerializer}
     )
-    @logger(level="log", name="create_blog")
+    # @logger(level="log", name="create_blog")
     def post(self, request,*args, **kwargs):
         serializer = SoBlogsSerializer(data=request.data)
         if serializer.is_valid():
@@ -42,7 +42,7 @@ class SoBlogsAPI(APIView):
         request_body=SoBlogsSerializer,
         responses={200: SoBlogsSerializer}
     )
-    @logger(level="log", name="update_blog")
+    # @logger(level="log", name="update_blog")
     def patch(self, request,*args, **kwargs):
         blog_id = request.data.get("id")
         if not blog_id:
@@ -64,7 +64,7 @@ class SoBlogsAPI(APIView):
         ],
         responses={200: openapi.Response("Xoá mềm blog thành công")}
     )
-    @logger(level="log", name="delete_blog")
+    # @logger(level="log", name="delete_blog")
     def delete(self, request, *args, **kwargs):
         try:
             blog_id = request.data.get("id")

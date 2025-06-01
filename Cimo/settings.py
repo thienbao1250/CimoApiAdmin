@@ -30,8 +30,8 @@ CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
     "https://admin.cimoschool.online",
 ]
-CSRF_COOKIE_SECURE = True  # Nếu dùng HTTPS
-CSRF_COOKIE_SAMESITE = 'None'
+CSRF_COOKIE_SECURE = False  # Nếu dùng HTTPS
+CSRF_COOKIE_SAMESITE = 'Lax'
 ALLOWED_HOSTS = ['*']
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [

@@ -16,7 +16,7 @@ class SoClassesAPI(APIView):
         operation_description="Lấy danh sách lớp học (isDeleted=False)",
         responses={200: SoClassesSerializer(many=True)}
     )
-    @logger(level="log", name="get_classes")
+    # @logger(level="log", name="get_classes")
     def get(self, request,*args, **kwargs):
         classes = SoClasses.objects.filter(isDeleted=False)
         serializer = SoClassesSerializer(classes, many=True)
@@ -26,7 +26,7 @@ class SoClassesAPI(APIView):
         request_body=SoClassesSerializer,
         responses={201: SoClassesSerializer}
     )
-    @logger(level="log", name="create_class")
+    # @logger(level="log", name="create_class")
     def post(self, request,*args, **kwargs):
         try:
             data = request.data
@@ -50,7 +50,7 @@ class SoClassesAPI(APIView):
         request_body=SoClassesSerializer,
         responses={200: SoClassesSerializer}
     )
-    @logger(level="log", name="update_class")
+    # @logger(level="log", name="update_class")
     def patch(self, request,*args, **kwargs):
         try:
             data = request.data
@@ -82,7 +82,7 @@ class SoClassesAPI(APIView):
         ),
         responses={200: openapi.Response("Xoá lớp học thành công")}
     )
-    @logger(level="log", name="delete_class")
+    # @logger(level="log", name="delete_class")
     def delete(self, request,*args, **kwargs):
         try:
             class_id = request.data.get("id")
@@ -91,7 +91,7 @@ class SoClassesAPI(APIView):
             class_obj = SoClasses.objects.get(id=class_id)
             class_obj.isDeleted = True
             class_obj.save()
-            return Response({"message": "Đã xoá lớp học (mềm)"})
+            return Response({"message": "Đã xoá lớp học."})
         except SoClasses.DoesNotExist:
             return Response({"error": "Không tìm thấy lớp học"}, status=404)
         except Exception as e:
@@ -111,7 +111,7 @@ class SoClassesCountAPI(APIView):
             }
         ))}
     )
-    @logger(level="log", name="count_classes")
+    # @logger(level="log", name="count_classes")
     def get(self, request,*args, **kwargs):
         queryset = SoClasses.objects.filter(isDeleted=False)
         where = request.query_params.get('where')

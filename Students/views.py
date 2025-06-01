@@ -30,7 +30,7 @@ class SoStudentAPIView(APIView):
         operation_description="Lấy danh sách tất cả học sinh (isDeleted=False)",
         responses={200: SoStudentsSerializer(many=True)}
     )
-    @logger(level="log", name="get_students")
+    # @logger(level="log", name="get_students")
     def get(self, request, *args, **kwargs):
         students = SoStudent.objects.filter(isDeleted=False)
         serializer = SoStudentsSerializer(students, many=True)
@@ -40,7 +40,7 @@ class SoStudentAPIView(APIView):
         request_body=SoStudentsSerializer,
         responses={201: SoStudentsSerializer}
     )
-    @logger(level="log", name="create_student")
+    # @logger(level="log", name="create_student")
     def post(self, request, *args, **kwargs):
         try:
             data = request.data
@@ -72,7 +72,7 @@ class SoStudentAPIView(APIView):
         request_body=SoStudentsSerializer,
         responses={200: SoStudentsSerializer}
     )
-    @logger(level="log", name="update_student")
+    # @logger(level="log", name="update_student")
     def patch(self, request, *args, **kwargs):
         try:
             data = request.data
@@ -107,7 +107,7 @@ class SoStudentAPIView(APIView):
         ),
         responses={200: openapi.Response('Xoá mềm học sinh thành công')}
     )
-    @logger(level="log", name="delete_student")
+    # @logger(level="log", name="delete_student")
     def delete(self, request, *args, **kwargs):
         try:
             student_id = request.data.get("id")
@@ -116,7 +116,7 @@ class SoStudentAPIView(APIView):
             student = SoStudent.objects.get(id=student_id)
             student.isDeleted = True
             student.save()
-            return Response({"message": "Đã xoá học sinh (mềm)"})
+            return Response({"message": "Đã xoá học sinh."})
         except SoStudent.DoesNotExist:
             return Response({"error": "Không tìm thấy học sinh"}, status=404)
         except Exception as e:

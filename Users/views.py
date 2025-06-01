@@ -27,7 +27,7 @@ class SoUserAPIView(APIView):
         operation_description="Lấy danh sách tất cả người dùng (isDeleted=False)",
         responses={200: SoUserSerializer(many=True)}
     )
-    @logger(level="log", name="get_users")
+    # @logger(level="log", name="get_users")
     def get(self, request, *args, **kwargs):
         users = SoUser.objects.filter(isDeleted=False)
         serializer = SoUserSerializer(users, many=True)
@@ -37,7 +37,7 @@ class SoUserAPIView(APIView):
         request_body=SoUserSerializer,
         responses={201: SoUserSerializer}
     )
-    @logger(level="log", name="create_user")
+    # @logger(level="log", name="create_user")
     def post(self, request, *args, **kwargs):
         try:
             data = request.data
@@ -99,7 +99,7 @@ class SoUserAPIView(APIView):
         ),
         responses={200: openapi.Response('Xoá thành công')}
     )
-    @logger(level="log", name="delete_user")
+    # @logger(level="log", name="delete_user")
     def delete(self, request, *args, **kwargs):
         try:
             user_id = request.data.get("id")
@@ -108,7 +108,7 @@ class SoUserAPIView(APIView):
             user = SoUser.objects.get(id=user_id)
             user.isDeleted = True
             user.save()
-            return Response({"message": "Đã xoá người dùng (mềm)"})
+            return Response({"message": "Đã xoá người dùng."})
         except SoUser.DoesNotExist:
             return Response({"error": "Không tìm thấy người dùng"}, status=404)
         except Exception as e:

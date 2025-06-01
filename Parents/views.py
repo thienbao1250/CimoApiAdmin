@@ -13,7 +13,7 @@ class SoParentsAPIView(APIView):
         operation_description="Lấy danh sách tất cả phụ huynh (isDeleted=False)",
         responses={200: SoParentsSerializer(many=True)}
     )
-    @logger(level="log", name="get_parents")
+    # @logger(level="log", name="get_parents")
     def get(self, request, *args, **kwargs):
         parents = SoParents.objects.filter(isDeleted=False)
         serializer = SoParentsSerializer(parents, many=True)
@@ -45,7 +45,7 @@ class SoParentsAPIView(APIView):
         ),
         responses={201: SoParentsSerializer}
     )
-    @logger(level="log", name="create_parent")
+    # @logger(level="log", name="create_parent")
     def post(self, request, *args, **kwargs):
         try:
             data = request.data
@@ -107,7 +107,7 @@ class SoParentsAPIView(APIView):
         ),
         responses={200: SoParentsSerializer}
     )
-    @logger(level="log", name="update_parent")
+    # @logger(level="log", name="update_parent")
     def patch(self, request, *args, **kwargs):
         try:
             data = request.data
@@ -141,14 +141,14 @@ class SoParentsAPIView(APIView):
         ),
         responses={200: openapi.Response('Xoá thành công')}
     )
-    @logger(level="log", name="delete_parent")
+    # @logger(level="log", name="delete_parent")
     def delete(self, request, *args, **kwargs):
         try:
             parent_id = request.data.get("id")
             parent = SoParents.objects.get(id=parent_id)
             parent.isDeleted = True
             parent.save()
-            return Response({"message": "Đã xoá phụ huynh (mềm)"})
+            return Response({"message": "Đã xoá phụ huynh."})
         except SoParents.DoesNotExist:
             return Response({"error": "Không tìm thấy phụ huynh"}, status=404)
         except Exception as e:
@@ -160,7 +160,7 @@ class SoStudentParentsAPI(APIView):
         operation_description="Lấy danh sách tất cả liên kết học sinh - phụ huynh (isDeleted=False)",
         responses={200: SoStudentParentsSerializer(many=True)}
     )
-    @logger(level="log", name="get_student_parents")
+    # @logger(level="log", name="get_student_parents")
     def get(self, request):
         links = SoStudentParents.objects.filter(isDeleted=False)
         serializer = SoStudentParentsSerializer(links, many=True)
@@ -185,7 +185,7 @@ class SoStudentParentsAPI(APIView):
         ),
         responses={201: SoStudentParentsSerializer(many=True)}
     )
-    @logger(level="log", name="create_student_parents")
+    # @logger(level="log", name="create_student_parents")
     def post(self, request):
         try:
             data = request.data
@@ -222,7 +222,7 @@ class SoStudentParentsAPI(APIView):
         request_body=SoStudentParentsSerializer,
         responses={200: SoStudentParentsSerializer}
     )
-    @logger(level="log", name="update_student_parents")
+    # @logger(level="log", name="update_student_parents")
     def patch(self, request):
         try:
             data = request.data
@@ -250,9 +250,9 @@ class SoStudentParentsAPI(APIView):
         manual_parameters=[
             openapi.Parameter('id', openapi.IN_PATH, type=openapi.TYPE_STRING, required=True)
         ],
-        responses={200: openapi.Response('Xoá mềm thành công')}
+        responses={200: openapi.Response('Xoá thành công')}
     )
-    @logger(level="log", name="delete_student_parents") 
+    # @logger(level="log", name="delete_student_parents") 
     def delete(self, request, id=None):
         try:
             if not id:
@@ -260,6 +260,6 @@ class SoStudentParentsAPI(APIView):
             link = SoStudentParents.objects.get(id=id)
             link.isDeleted = True
             link.save()
-            return Response({"message": "Đã xoá mềm liên kết"})
+            return Response({"message": "Đã xoá liên kết"})
         except SoStudentParents.DoesNotExist:
             return Response({"error": "Không tìm thấy liên kết"}, status=404)
