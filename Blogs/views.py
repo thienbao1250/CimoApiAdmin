@@ -43,8 +43,8 @@ class SoBlogsAPI(APIView):
         responses={200: SoBlogsSerializer}
     )
     # @logger(level="log", name="update_blog")
-    def patch(self, request,*args, **kwargs):
-        blog_id = request.data.get("id")
+    def patch(self, request,*args,blog_id, **kwargs):
+        # blog_id = request.data.get("id")
         if not blog_id:
             return Response({"error": "Thiếu ID blog"}, status=400)
         try:
@@ -65,9 +65,9 @@ class SoBlogsAPI(APIView):
         responses={200: openapi.Response("Xoá mềm blog thành công")}
     )
     # @logger(level="log", name="delete_blog")
-    def delete(self, request, *args, **kwargs):
+    def delete(self, request,blog_id, *args, **kwargs):
         try:
-            blog_id = request.data.get("id")
+            # blog_id = request.data.get("id")
             if not blog_id:
                 return Response({"error": "Thiếu ID blog"}, status=400)
 

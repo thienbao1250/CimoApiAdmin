@@ -51,10 +51,10 @@ class SoClassesAPI(APIView):
         responses={200: SoClassesSerializer}
     )
     # @logger(level="log", name="update_class")
-    def patch(self, request,*args, **kwargs):
+    def patch(self, request,class_id,*args, **kwargs):
         try:
             data = request.data
-            class_id = data.get("id")
+            # class_id = data.get("id")
             if not class_id:
                 return Response({"error": "Thiếu ID lớp học"}, status=400)
             class_obj = SoClasses.objects.get(id=class_id)
@@ -83,9 +83,9 @@ class SoClassesAPI(APIView):
         responses={200: openapi.Response("Xoá lớp học thành công")}
     )
     # @logger(level="log", name="delete_class")
-    def delete(self, request,*args, **kwargs):
+    def delete(self, request,class_id,*args, **kwargs):
         try:
-            class_id = request.data.get("id")
+            # class_id = request.data.get("id")
             if not class_id:
                 return Response({"error": "Thiếu ID lớp học"}, status=400)
             class_obj = SoClasses.objects.get(id=class_id)

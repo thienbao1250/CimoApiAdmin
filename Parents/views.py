@@ -108,10 +108,10 @@ class SoParentsAPIView(APIView):
         responses={200: SoParentsSerializer}
     )
     # @logger(level="log", name="update_parent")
-    def patch(self, request, *args, **kwargs):
+    def patch(self, request,parent_id, *args, **kwargs):
         try:
             data = request.data
-            parent_id = data.get("id")
+            # parent_id = data.get("id")
             parent = SoParents.objects.get(id=parent_id)
 
             for field in ['name', 'dob', 'gender', 'phone', 'email', 'address', 'nationalId', 'relation', 'job', 'avt', 'createdBy', 'updatedBy']:
@@ -142,9 +142,9 @@ class SoParentsAPIView(APIView):
         responses={200: openapi.Response('Xoá thành công')}
     )
     # @logger(level="log", name="delete_parent")
-    def delete(self, request, *args, **kwargs):
+    def delete(self, request,parent_id, *args, **kwargs):
         try:
-            parent_id = request.data.get("id")
+            # parent_id = request.data.get("id")
             parent = SoParents.objects.get(id=parent_id)
             parent.isDeleted = True
             parent.save()
@@ -223,10 +223,10 @@ class SoStudentParentsAPI(APIView):
         responses={200: SoStudentParentsSerializer}
     )
     # @logger(level="log", name="update_student_parents")
-    def patch(self, request):
+    def patch(self,link_id, request):
         try:
             data = request.data
-            link_id = data.get("id")
+            # link_id = data.get("id")
             if not link_id:
                 return Response({"error": "Thiếu ID liên kết"}, status=400)
 
@@ -253,11 +253,11 @@ class SoStudentParentsAPI(APIView):
         responses={200: openapi.Response('Xoá thành công')}
     )
     # @logger(level="log", name="delete_student_parents") 
-    def delete(self, request, id=None):
+    def delete(self, request, link_id):
         try:
-            if not id:
+            if not link_id:
                 return Response({"error": "Thiếu ID"}, status=400)
-            link = SoStudentParents.objects.get(id=id)
+            link = SoStudentParents.objects.get(id=link_id)
             link.isDeleted = True
             link.save()
             return Response({"message": "Đã xoá liên kết"})

@@ -73,10 +73,10 @@ class SoStudentAPIView(APIView):
         responses={200: SoStudentsSerializer}
     )
     # @logger(level="log", name="update_student")
-    def patch(self, request, *args, **kwargs):
+    def patch(self, request,student_id, *args, **kwargs):
         try:
             data = request.data
-            student_id = data.get("id")
+            # student_id = data.get("id")
             if not student_id:
                 return Response({"error": "Thiếu ID học sinh"}, status=400)
             student = SoStudent.objects.get(id=student_id)
@@ -108,9 +108,9 @@ class SoStudentAPIView(APIView):
         responses={200: openapi.Response('Xoá mềm học sinh thành công')}
     )
     # @logger(level="log", name="delete_student")
-    def delete(self, request, *args, **kwargs):
+    def delete(self, request,student_id, *args, **kwargs):
         try:
-            student_id = request.data.get("id")
+            # student_id = request.data.get("id")
             if not student_id:
                 return Response({"error": "Thiếu ID học sinh"}, status=400)
             student = SoStudent.objects.get(id=student_id)

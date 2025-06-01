@@ -62,10 +62,10 @@ class SoRoleAPI(APIView):
         responses={200: SoRoleSerializer}
     )
     # @logger(level="log", name="update_role")
-    def patch(self, request, *args, **kwargs):
+    def patch(self, request,role_id, *args, **kwargs):
         try:
             data = request.data
-            role_id = data.get("id")
+            # role_id = data.get("id")
             if not role_id:
                 return Response({"error": "Thiếu ID role"}, status=400)
 
@@ -96,9 +96,9 @@ class SoRoleAPI(APIView):
         responses={200: openapi.Response("Xoá role thành công")}
     )
     # @logger(level="log", name="delete_role")
-    def delete(self, request, *args, **kwargs):
+    def delete(self, request, role_id,*args, **kwargs):
         try:
-            role_id = request.data.get("id")
+            # role_id = request.data.get("id")
             if not role_id:
                 return Response({"error": "Thiếu ID role"}, status=400)
 
