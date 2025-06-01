@@ -21,7 +21,10 @@ from django.db.models import Q
 import uuid
 import json
 from utils.decorator import logger
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 
+@method_decorator(csrf_exempt, name='dispatch')
 class SoUserAPIView(APIView):
     @swagger_auto_schema(
         operation_description="Lấy danh sách tất cả người dùng (isDeleted=False)",
